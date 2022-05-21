@@ -42,9 +42,9 @@ public class Driver {
 		else if(configFileReader.getBrowser().equalsIgnoreCase("Chrome")) {
 			logger.info("In Chrome ...");
 			// Setup the chromedriver using WebDriverManager instead of using System.setProperty
-			//WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().setup();
 
-			WebDriverManager.chromedriver().version("101.0.4951.67").setup();
+			//WebDriverManager.chromedriver().version("101.0.4951.67").setup();
 			// Create driver object for Chrome
 			//System.setProperty("webdriver.chrome.driver", configFileReader.getDriverPath());
 
