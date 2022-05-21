@@ -44,7 +44,7 @@ public class Driver {
 			// Setup the chromedriver using WebDriverManager instead of using System.setProperty
 			WebDriverManager.chromedriver().setup();
 
-			//WebDriverManager.chromedriver().version("98.0.4758.102").setup();
+			//WebDriverManager.chromedriver().version("101.0.4951.67").setup();
 			// Create driver object for Chrome
 			//System.setProperty("webdriver.chrome.driver", configFileReader.getDriverPath());
 
@@ -53,7 +53,7 @@ public class Driver {
 			// When run script from Linux terminal tunnel, like run by Jenkins. In general, Linux terminal tunnel not have display screen, 
 			// but run script with headful model require a physical or virtual display. Run with headless model when not setup virtual 
 			// display by xWindow/xvbf
-			//options.addArguments("headless"); // Set headless to run from Jenkins
+			options.addArguments("headless"); // Set headless to run from Jenkins
 			options.addArguments("start-maximized"); // Don't maximize Chrome, because has no display if running from Jenkins
 			options.setExperimentalOption("useAutomationExtension", false);
 			driver = new ChromeDriver(options);
